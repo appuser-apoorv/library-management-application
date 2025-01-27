@@ -1,0 +1,45 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.ehcache.org/v3"
+        xsi:schemaLocation="http://www.ehcache.org/v3 http://www.ehcache.org/schema/ehcache-core.xsd">
+
+
+        <!-- Cache for Books -->
+    <cache alias="bookCache">
+        <resources>
+            <heap unit="entries">100</heap>
+        </resources>
+        <expiry>
+            <tti unit="seconds">3600</tti> <!-- Time-to-idle -->
+        </expiry>
+    </cache>
+
+    <!-- Cache for Users -->
+    <cache alias="usersCache">
+        <resources>
+            <heap unit="entries">100</heap>
+        </resources>
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+    </cache>
+
+    <!-- Cache for Authors -->
+    <cache alias="authorCache">
+        <resources>
+            <heap unit="entries">100</heap>
+        </resources>
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+    </cache>
+
+    <!-- Cache for Publishers -->
+    <cache alias="publisherCache">
+        <resources>
+            <heap unit="entries">100</heap>
+        </resources>
+        <expiry>
+            <tti unit="seconds">60</tti>
+        </expiry>
+    </cache>
+</config>
